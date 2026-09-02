@@ -1,0 +1,74 @@
+class Graph:
+    def __init__(self, x, y, scale):
+        self._x = x           
+        self._y = y          
+        self._scale = scale   
+    
+    def move(self, dx, dy):
+        self._x += dx
+        self._y += dy
+        print(f"График перемещен на ({dx}, {dy})")
+    
+    def change_scale(self, factor):
+        self._scale *= factor
+        print(f"Масштаб изменен в {factor} раз")
+    
+    def show(self):
+        print(f"График: x={self._x}, y={self._y}, масштаб={self._scale}")
+
+graph1 = Graph(10, 5, 1.0)
+graph2 = Graph(-3, 8, 2.0)
+graph3 = Graph(0, 0, 1.5)
+
+print("=== НАЧАЛЬНОЕ СОСТОЯНИЕ ===")
+graph1.show()
+graph2.show()
+graph3.show()
+
+print("\n=== ПЕРЕМЕЩАЕМ ПЕРВЫЙ ГРАФИК ===")
+graph1.move(7, -3)
+
+print("\n=== ИЗМЕНЯЕМ МАСШТАБ ВТОРОГО ===")
+graph2.change_scale(0.5)
+
+print("\n=== ИТОГОВОЕ СОСТОЯНИЕ ===")
+graph1.show()
+graph2.show()
+graph3.show()
+class Graph:
+    def __init__(self, x, y, scale):
+        self._x = x          
+        self._y = y           
+        self._scale = scale   
+    
+    def move(self, dx, dy):
+        self._x += dx
+        self._y += dy
+        print(f"График перемещен на ({dx}, {dy})")
+    
+    def change_scale(self, factor):
+        self._scale *= factor
+        print(f"Масштаб изменен в {factor} раз")
+    
+    def show(self):
+        print(f"График: x={self._x}, y={self._y}, масштаб={self._scale}")
+
+graph1 = Graph(10, 5, 1.0)
+graph2 = Graph(-3, 8, 2.0)
+graph3 = Graph(0, 0, 1.5)
+
+print("=== НАЧАЛЬНОЕ СОСТОЯНИЕ ===")
+graph1.show()
+graph2.show()
+graph3.show()
+
+print("\n=== ПЕРЕМЕЩАЕМ ПЕРВЫЙ ГРАФИК ===")
+graph1.move(7, -3)
+
+print("\n=== ИЗМЕНЯЕМ МАСШТАБ ВТОРОГО ===")
+graph2.change_scale(0.5)
+
+print("\n=== ИТОГОВОЕ СОСТОЯНИЕ ===")
+graph1.show()
+graph2.show()
+graph3.show()
