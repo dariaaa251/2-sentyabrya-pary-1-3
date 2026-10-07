@@ -1,0 +1,18 @@
+class DataBase:
+    lst_data = []
+    FIELDS = ('id', 'name', 'old', 'salary')
+
+    def insert(self, data):
+        for record in data:
+            values = record.split()
+            self.lst_data.append(dict(zip(self.FIELDS, values)))
+
+    def select(self, a, b):
+        return self.lst_data[a:b + 1]
+
+db = DataBase()
+db.insert(['1 Сергей 35 120000', '2 Иван 40 150000', '3 Ольга 28 90000'])
+
+print(db.lst_data)
+print(db.select(0, 1))
+print(db.select(1, 2))
